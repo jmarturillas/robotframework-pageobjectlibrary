@@ -1,5 +1,6 @@
 from io import open
 from setuptools import setup
+import sys
 
 if sys.version_info[0] > 2:
     exec(open('PageObjectLibrary/version.py').read())
