@@ -1,7 +1,10 @@
 from io import open
 from setuptools import setup
 
-exec(open('PageObjectLibrary/version.py').read())
+if sys.version_info[0] > 2:
+    exec(open('PageObjectLibrary/version.py').read())
+else:
+    execfile('PageObjectLibrary/version.py')
 
 setup(
     name             = 'robotframework-pageobjectlibrary',
